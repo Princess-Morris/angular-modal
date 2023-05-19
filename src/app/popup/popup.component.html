@@ -1,0 +1,47 @@
+<div>
+
+<div class="search">
+  <label class="label">Search:</label>
+  <input class="input" type="text" />
+</div>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <div class="list">
+    <ng-container matColumnDef="issuId" {[ngStyle]="{'padding': 20px}}">
+      <th mat-header-cell *matHeaderCellDef> Issue ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.issuId}} </td>
+    </ng-container>
+    </div>
+
+    <div class="list">
+    <ng-container matColumnDef="loggedData">
+      <th mat-header-cell *matHeaderCellDef> Logged Data </th>
+      <td mat-cell *matCellDef="let element"> {{element.loggedData}} </td>
+    </ng-container>
+    </div>
+
+    <div class="list">
+    <ng-container matColumnDef="actor">
+      <th mat-header-cell *matHeaderCellDef> Actor </th>
+      <td mat-cell *matCellDef="let element"> {{element.actor}} </td>
+    </ng-container>
+    </div>
+
+    <div class="list">
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef> Action </th>
+      <td mat-cell *matCellDef="let element"> {{element.action}} </td>
+    </ng-container>
+    </div>
+  
+  
+    <tr mat-header-row *matHeaderRowDef="displayColumn"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayColumn;"></tr>
+  </table>
+  
+</div>

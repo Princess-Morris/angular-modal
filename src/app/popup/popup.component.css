@@ -1,0 +1,26 @@
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 20px;
+}
+
+.label{
+    padding-right: 5px;
+}
+
+
+.input{
+    background-color: #fafafa;
+    border: 1px solid lightgray;
+    outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+/* .list{
+    padding: 20px;
+}
+
+table > div{
+    padding: 20px;
+} */
